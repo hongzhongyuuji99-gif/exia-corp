@@ -61,7 +61,7 @@ type Card = {
 
 const CARDS: Card[] = [
   {
-    date: '2026.07',
+    date: '2026.08',
     tag: '実績',
     tagBg: 'bg-yellow-500',
     title: '顧客累計売上が $85,000 を突破しました',
@@ -74,7 +74,7 @@ const CARDS: Card[] = [
     },
   },
   {
-    date: '2026.07',
+    date: '2026.08',
     tag: 'サービス',
     tagBg: 'bg-blue-700',
     title: 'eBay副業支援サービスサイトを公開しました',
@@ -88,7 +88,7 @@ const CARDS: Card[] = [
     },
   },
   {
-    date: '2026.04',
+    date: '2026.08',
     tag: 'お知らせ',
     tagBg: 'bg-gray-600',
     title: '株式会社EXIAを設立しました',
