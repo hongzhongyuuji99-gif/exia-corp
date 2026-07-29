@@ -133,7 +133,7 @@ export default function Home() {
               },
             ].map((item) => (
               <div key={item.num} className="flex flex-col md:flex-row gap-8 items-start">
-                <span className="text-6xl font-black text-gray-300 leading-none flex-shrink-0">{item.num}</span>
+                <span className="text-6xl font-black text-blue-100 leading-none flex-shrink-0" style={{WebkitTextStroke: "2px #2563eb"}}>{item.num}</span>
                 <div>
                   <h3 className="text-2xl font-black text-gray-900 mb-4">{item.title}</h3>
                   <p className="text-gray-500 leading-relaxed text-lg">{item.desc}</p>
