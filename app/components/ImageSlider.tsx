@@ -36,14 +36,14 @@ export function ImageSlider() {
           key={i}
           className="absolute inset-0 flex items-center justify-center"
           style={{
-            background: slide.src ? undefined : slide.gradient,
+            background: slide.src ? '#f8f9fa' : slide.gradient,
             opacity: i === current ? 1 : 0,
             transition: 'opacity 1.2s ease',
           }}
         >
           {slide.src ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={slide.src} alt={slide.label} className="w-full h-full object-cover object-top" />
+            <img src={slide.src} alt={slide.label} className="w-full h-full object-contain" />
           ) : (
             <div className="text-center select-none">
               <p className="text-white/20 text-2xl font-bold">{slide.label}</p>
