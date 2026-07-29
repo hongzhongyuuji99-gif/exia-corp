@@ -1,5 +1,6 @@
 import { HeroSection } from './components/HeroSection'
 import { ImageSlider } from './components/ImageSlider'
+import { TopicsSection } from './components/TopicsSection'
 
 export default function Home() {
   return (
@@ -97,71 +98,7 @@ export default function Home() {
       </section>
 
       {/* トピックス */}
-      <section className="py-28 px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-blue-700 text-sm font-bold uppercase tracking-widest mb-4">TOPICS</p>
-          <h2 className="text-4xl font-black text-gray-900 mb-16">実績・お知らせ</h2>
-
-          {/* 実績数字 */}
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
-            {[
-              { num: "11", unit: "名", label: "代行顧客数（2026年7月現在）" },
-              { num: "$85K", unit: "+", label: "顧客累計売上高（実績ベース）" },
-              { num: "2026", unit: "年", label: "サービス開始" },
-            ].map((item) => (
-              <div key={item.label} className="border-t-2 border-blue-700 pt-8">
-                <p className="font-black text-gray-900 mb-2 leading-none" style={{fontSize: "3.5rem"}}>
-                  {item.num}<span className="text-2xl ml-2">{item.unit}</span>
-                </p>
-                <p className="text-gray-500 text-sm">{item.label}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* ニュースリスト */}
-          <div className="divide-y divide-gray-100">
-            {[
-              {
-                date: "2026.07",
-                tag: "サービス",
-                tagColor: "text-blue-700 border-blue-200",
-                text: "eBay副業支援サービスサイトを公開しました",
-                href: "https://my-company-hp.vercel.app",
-              },
-              {
-                date: "2026.07",
-                tag: "実績",
-                tagColor: "text-yellow-700 border-yellow-200",
-                text: "代行顧客の累計売上が$85,000を突破しました",
-                href: null,
-              },
-              {
-                date: "2026.04",
-                tag: "お知らせ",
-                tagColor: "text-gray-600 border-gray-200",
-                text: "株式会社EXIAを設立しました",
-                href: null,
-              },
-            ].map((item, i) => (
-              <div key={i} className="py-6 flex flex-col md:flex-row md:items-center gap-3 md:gap-6">
-                <span className="text-gray-400 text-sm flex-shrink-0 w-24">{item.date}</span>
-                <span className={`text-xs font-bold border px-3 py-1 rounded-full w-fit flex-shrink-0 ${item.tagColor}`}>
-                  {item.tag}
-                </span>
-                {item.href ? (
-                  <a href={item.href} target="_blank" rel="noopener noreferrer"
-                    className="text-gray-900 font-medium hover:text-blue-700 transition flex items-center gap-1">
-                    {item.text}
-                    <span className="text-blue-700">→</span>
-                  </a>
-                ) : (
-                  <p className="text-gray-900 font-medium">{item.text}</p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TopicsSection />
 
       {/* 代表メッセージ */}
       <section id="message" className="py-28 px-8 bg-gray-50">
