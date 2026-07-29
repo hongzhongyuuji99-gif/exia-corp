@@ -9,7 +9,7 @@ const SLIDES = [
   },
   {
     label: 'ミーティングの様子',
-    src: null as string | null,
+    src: '/meeting.jpg.png' as string | null,
     gradient: 'linear-gradient(135deg, #0d2a47 0%, #1e3a5f 100%)',
   },
   {
