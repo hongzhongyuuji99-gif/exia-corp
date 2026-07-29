@@ -24,7 +24,7 @@ export function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 text-center px-6 w-full">
+      <div className="relative z-10 text-center px-4 sm:px-6 w-full">
         {/* タグライン */}
         <p
           className="text-blue-400 text-sm font-bold uppercase tracking-[0.3em] mb-10"
@@ -47,7 +47,7 @@ export function HeroSection() {
           }}
         >
           <span className="block font-black text-white leading-none tracking-tight"
-            style={{ fontSize: 'clamp(3rem, 12vw, 9rem)' }}>
+            style={{ fontSize: 'clamp(2.4rem, 10vw, 9rem)' }}>
             副業で
           </span>
         </div>

@@ -107,7 +107,7 @@ export function TopicsSection() {
   const activeCard = active !== null ? CARDS[active] : null
 
   return (
-    <section className="py-28 px-8 bg-white">
+    <section className="py-16 px-5 md:py-28 md:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <p className="text-blue-700 text-sm font-bold uppercase tracking-widest mb-4">TOPICS</p>
         <h2 className="text-4xl font-black text-gray-900 mb-16">実績・お知らせ</h2>

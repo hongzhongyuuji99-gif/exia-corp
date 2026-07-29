@@ -21,6 +21,10 @@ export default function Home() {
             <a href="#company" className="hover:text-blue-700 transition">会社概要</a>
             <a href="#contact" className="bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition">お問い合わせ</a>
           </nav>
+          {/* モバイル用CTAボタン */}
+          <a href="#contact" className="md:hidden bg-blue-700 text-white text-sm font-bold px-4 py-2 rounded-full">
+            お問い合わせ
+          </a>
         </div>
       </header>
 
@@ -31,7 +35,7 @@ export default function Home() {
       <ImageSlider />
 
       {/* ビジョン */}
-      <section id="vision" className="bg-gray-50 py-28 px-8">
+      <section id="vision" className="bg-gray-50 py-16 px-5 md:py-28 md:px-8">
         <div className="max-w-5xl mx-auto">
           <p className="text-blue-700 text-sm font-bold uppercase tracking-widest mb-4">VISION</p>
           <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-8 leading-tight">
@@ -48,7 +52,7 @@ export default function Home() {
       </section>
 
       {/* 事業内容 */}
-      <section id="service" className="py-28 px-8">
+      <section id="service" className="py-16 px-5 md:py-28 md:px-8">
         <div className="max-w-7xl mx-auto">
           <p className="text-blue-700 text-sm font-bold uppercase tracking-widest mb-4">SERVICE</p>
           <h2 className="text-4xl font-black text-gray-900 mb-16">事業内容</h2>
@@ -69,7 +73,7 @@ export default function Home() {
       </section>
 
       {/* バリュー */}
-      <section className="bg-gray-50 py-28 px-8">
+      <section className="bg-gray-50 py-16 px-5 md:py-28 md:px-8">
         <div className="max-w-7xl mx-auto">
           <p className="text-blue-700 text-sm font-bold uppercase tracking-widest mb-4">VALUES</p>
           <h2 className="text-4xl font-black text-gray-900 mb-16">私たちが大切にしていること</h2>
@@ -136,7 +140,7 @@ export default function Home() {
       </section>
 
       {/* 会社概要 */}
-      <section id="company" className="py-28 px-8">
+      <section id="company" className="py-16 px-5 md:py-28 md:px-8">
         <div className="max-w-5xl mx-auto">
           <p className="text-blue-700 text-sm font-bold uppercase tracking-widest mb-4">COMPANY</p>
           <h2 className="text-4xl font-black text-gray-900 mb-16">会社概要</h2>

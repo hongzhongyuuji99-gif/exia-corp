@@ -33,47 +33,55 @@ export function ImageSlider() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden" style={{ height: '60vh', minHeight: '460px' }}>
+    <section className="relative overflow-hidden" style={{ height: '60vh', minHeight: '420px' }}>
       {SLIDES.map((slide, i) => (
         <div
           key={i}
-          className="absolute inset-0 flex"
-          style={{
-            opacity: i === current ? 1 : 0,
-            transition: 'opacity 1.2s ease',
-          }}
+          className="absolute inset-0"
+          style={{ opacity: i === current ? 1 : 0, transition: 'opacity 1.2s ease' }}
         >
-          {/* 左：テキストエリア */}
-          <div
-            className="flex flex-col justify-center px-10 md:px-16 py-12 flex-shrink-0"
-            style={{ width: '42%', background: '#0a1628' }}
-          >
-            <p className="text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">
-              {slide.label}
-            </p>
-            <h2
-              className="text-3xl md:text-4xl font-black text-white leading-tight mb-6"
-              style={{ whiteSpace: 'pre-line' }}
-            >
-              {slide.heading}
-            </h2>
-            <p className="text-gray-400 text-sm leading-relaxed">{slide.body}</p>
+          {/* ── スマホ: 画像 + グラデーションオーバーレイ + 下部テキスト ── */}
+          <div className="md:hidden h-full relative">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={slide.src} alt={slide.label} className="w-full h-full object-cover" />
+            <div
+              className="absolute inset-0"
+              style={{ background: 'linear-gradient(to top, rgba(10,22,40,0.93) 45%, rgba(10,22,40,0.2) 100%)' }}
+            />
+            <div className="absolute bottom-0 left-0 right-0 px-6 pb-16 text-white">
+              <p className="text-blue-400 text-xs font-bold uppercase tracking-widest mb-2">{slide.label}</p>
+              <h2 className="text-xl font-black leading-tight mb-2" style={{ whiteSpace: 'pre-line' }}>
+                {slide.heading}
+              </h2>
+              <p className="text-gray-300 text-sm leading-relaxed">{slide.body}</p>
+            </div>
           </div>
 
-          {/* 右：画像エリア */}
-          <div className="flex-1 relative overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={slide.src}
-              alt={slide.label}
-              className="w-full h-full object-cover"
-            />
+          {/* ── デスクトップ: テキスト左 + 画像右 ── */}
+          <div className="hidden md:flex h-full">
+            <div
+              className="flex flex-col justify-center px-16 py-12 flex-shrink-0"
+              style={{ width: '42%', background: '#0a1628' }}
+            >
+              <p className="text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">{slide.label}</p>
+              <h2
+                className="text-3xl lg:text-4xl font-black text-white leading-tight mb-6"
+                style={{ whiteSpace: 'pre-line' }}
+              >
+                {slide.heading}
+              </h2>
+              <p className="text-gray-400 text-sm leading-relaxed">{slide.body}</p>
+            </div>
+            <div className="flex-1 relative overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={slide.src} alt={slide.label} className="w-full h-full object-cover" />
+            </div>
           </div>
         </div>
       ))}
 
       {/* インジケーター */}
-      <div className="absolute bottom-6 left-10 md:left-16 flex gap-3 items-center z-10">
+      <div className="absolute bottom-6 left-6 md:left-16 flex gap-3 items-center z-10">
         {SLIDES.map((_, i) => (
           <button
             key={i}
@@ -82,14 +90,12 @@ export function ImageSlider() {
             style={{
               width: i === current ? '36px' : '8px',
               height: '8px',
-              background: i === current ? 'white' : 'rgba(255,255,255,0.3)',
+              background: i === current ? 'white' : 'rgba(255,255,255,0.35)',
             }}
           />
         ))}
       </div>
-
-      {/* スライド番号 */}
-      <div className="absolute bottom-6 right-8 text-white/40 text-sm font-bold tracking-widest z-10">
+      <div className="absolute bottom-6 right-6 text-white/40 text-sm font-bold tracking-widest z-10">
         {String(current + 1).padStart(2, '0')} / {String(SLIDES.length).padStart(2, '0')}
       </div>
     </section>
