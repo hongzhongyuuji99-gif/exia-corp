@@ -1,3 +1,6 @@
+import { HeroSection } from './components/HeroSection'
+import { ImageSlider } from './components/ImageSlider'
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
@@ -20,27 +23,11 @@ export default function Home() {
         </div>
       </header>
 
-      {/* ヒーロー */}
-      <section className="max-w-7xl mx-auto px-8 py-24 flex flex-col md:flex-row items-center gap-16">
-        <div className="flex-1">
-          <p className="text-blue-700 text-sm font-bold uppercase tracking-widest mb-6">EXIA — GROWTH PARTNER</p>
-          <h1 className="text-5xl md:text-7xl font-black leading-tight text-gray-900 mb-8">
-            副業で、<br />人生を変える。
-          </h1>
-          <p className="text-gray-500 text-lg leading-relaxed">
-            EXIAは、海外輸出という新しいフィールドで副業の可能性をリードするグロースパートナーです。<br /><br />
-            誰もがリスクなく挑戦できる仕組みで、副業がもっとシンプルに、収入がもっと身近に。
-            すべての人が輝ける豊かな未来の実現に向けて、お客様と共に歩み続けます。
-          </p>
-        </div>
-        <div className="flex-1 flex justify-center">
-          <div className="relative w-full max-w-lg h-80 md:h-96 rounded-3xl overflow-hidden flex items-center justify-center" style={{background: "linear-gradient(135deg, #1e3a5f 0%, #2563eb 60%, #0ea5e9 100%)"}}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.png" alt="EXIA" className="w-48 h-48 object-contain opacity-20 absolute" />
-            <p className="relative text-white text-4xl font-black tracking-widest text-center leading-snug">CHANGE<br />YOUR LIFE</p>
-          </div>
-        </div>
-      </section>
+      {/* ヒーロー（フルスクリーンアニメーション） */}
+      <HeroSection />
+
+      {/* 社内風景スライダー */}
+      <ImageSlider />
 
       {/* ビジョン */}
       <section id="vision" className="bg-gray-50 py-28 px-8">
