@@ -30,7 +30,7 @@ export function ImageSlider() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden" style={{ height: '65vh', minHeight: '400px' }}>
+    <section className="relative overflow-hidden" style={{ height: '55vh', minHeight: '360px' }}>
       {SLIDES.map((slide, i) => (
         <div
           key={i}
@@ -43,7 +43,7 @@ export function ImageSlider() {
         >
           {slide.src ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={slide.src} alt={slide.label} className="w-full h-full object-cover" />
+            <img src={slide.src} alt={slide.label} className="w-full h-full object-cover object-top" />
           ) : (
             <div className="text-center select-none">
               <p className="text-white/20 text-2xl font-bold">{slide.label}</p>
