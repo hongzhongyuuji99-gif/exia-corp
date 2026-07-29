@@ -80,17 +80,6 @@ export function HeroSection() {
           あなたの挑戦を、私たちが全力で支えます。
         </p>
 
-        {/* スクロールインジケーター */}
-        <div
-          className="mt-20 flex flex-col items-center gap-2"
-          style={{
-            opacity: phase >= 3 ? 1 : 0,
-            transition: 'opacity 1s ease 0.4s',
-          }}
-        >
-          <span className="text-gray-500 text-xs tracking-[0.2em] uppercase">Scroll</span>
-          <div className="w-px h-12 bg-gradient-to-b from-gray-500 to-transparent" style={{ animation: 'pulse 2s infinite' }} />
-        </div>
       </div>
     </section>
   )
