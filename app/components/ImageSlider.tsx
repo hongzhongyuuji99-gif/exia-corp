@@ -3,19 +3,19 @@ import { useEffect, useState } from 'react'
 
 const SLIDES = [
   {
-    label: 'チーム / 社内風景',
-    src: null as string | null,
-    gradient: 'linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%)',
-  },
-  {
     label: 'ミーティングの様子',
     src: '/meeting.jpg.png' as string | null,
     gradient: 'linear-gradient(135deg, #0d2a47 0%, #1e3a5f 100%)',
   },
   {
     label: 'オフィス環境',
-    src: null as string | null,
+    src: '/offsu.jpg.png' as string | null,
     gradient: 'linear-gradient(135deg, #111827 0%, #1e3a5f 100%)',
+  },
+  {
+    label: '社内風景',
+    src: '/syanai.jpg.png' as string | null,
+    gradient: 'linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%)',
   },
 ]
 
