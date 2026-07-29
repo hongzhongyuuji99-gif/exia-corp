@@ -48,7 +48,7 @@ export function HeroSection() {
         >
           <span className="block font-black text-white leading-none tracking-tight"
             style={{ fontSize: 'clamp(3rem, 12vw, 9rem)' }}>
-            副業で、
+            副業で
           </span>
         </div>
 
