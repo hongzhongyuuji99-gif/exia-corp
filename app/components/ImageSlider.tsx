@@ -72,9 +72,14 @@ export function ImageSlider() {
               </h2>
               <p className="text-gray-400 text-sm leading-relaxed">{slide.body}</p>
             </div>
-            <div className="flex-1 relative overflow-hidden bg-gray-50 flex items-center justify-center">
+            <div className="flex-1 relative overflow-hidden">
+              {/* 背景: 同画像をぼかして余白を埋める */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={slide.src} alt={slide.label} className="w-full h-full object-contain" />
+              <img src={slide.src} aria-hidden="true" className="absolute inset-0 w-full h-full object-cover scale-110"
+                style={{ filter: 'blur(18px)', opacity: 0.5 }} />
+              {/* 前景: フル表示 */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={slide.src} alt={slide.label} className="absolute inset-0 w-full h-full object-contain relative z-10" />
             </div>
           </div>
         </div>
