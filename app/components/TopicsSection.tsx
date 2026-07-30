@@ -92,7 +92,7 @@ const CARDS: Card[] = [
     tag: 'お知らせ',
     tagBg: 'bg-gray-600',
     title: '株式会社EXIAを設立しました',
-    image: '/syanai.jpg.png',
+    image: '/syanai.jpg.webp',
     modal: {
       heading: '株式会社EXIA 設立',
       body: '2026年4月、「副業で人生を変える」というビジョンのもと、株式会社EXIAを設立しました。海外輸出コンサルティングを軸に、一人でも多くの方が安心して副業を始められる環境づくりに取り組んでいきます。',
