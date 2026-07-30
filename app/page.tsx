@@ -118,9 +118,8 @@ export default function Home() {
               },
             ].map((person) => (
               <div key={person.name} className="bg-white rounded-3xl p-10 shadow-sm">
-                <div className="w-20 h-20 rounded-full bg-gray-100 mb-6 flex items-center justify-center text-4xl">
-                  👤
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/kawada.jpg.png" alt={person.name} className="w-20 h-20 rounded-full object-cover mb-6" />
                 <blockquote className="text-gray-600 leading-relaxed text-base mb-8">
                   「{person.message}」
                 </blockquote>
