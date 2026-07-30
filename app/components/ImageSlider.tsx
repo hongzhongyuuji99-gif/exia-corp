@@ -72,9 +72,9 @@ export function ImageSlider() {
               </h2>
               <p className="text-gray-400 text-sm leading-relaxed">{slide.body}</p>
             </div>
-            <div className="flex-1 relative overflow-hidden">
+            <div className="flex-1 relative overflow-hidden bg-gray-50 flex items-center justify-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={slide.src} alt={slide.label} className="w-full h-full object-cover object-top" />
+              <img src={slide.src} alt={slide.label} className="w-full h-full object-contain" />
             </div>
           </div>
         </div>
