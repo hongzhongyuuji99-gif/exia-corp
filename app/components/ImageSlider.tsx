@@ -18,7 +18,7 @@ const SLIDES = [
     label: 'TEAM',
     heading: 'チームで、\n結果を出す。',
     body: '一人ひとりの力を合わせ、お客様の副業成功に向けてチーム一丸で取り組みます。',
-    src: '/syanai.jpg.png',
+    src: '/syanai.jpg.webp',
   },
 ]
 

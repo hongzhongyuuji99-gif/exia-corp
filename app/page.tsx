@@ -109,16 +109,11 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <p className="text-blue-700 text-sm font-bold uppercase tracking-widest mb-4">MESSAGE</p>
           <h2 className="text-4xl font-black text-gray-900 mb-16">代表メッセージ</h2>
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-1 gap-12 max-w-2xl">
             {[
               {
-                name: "弘中 勇次",
-                role: "共同代表",
-                message: "私たちはまだ、小さな挑戦者です。でも、だからこそできることがあると信じています。副業で人生が変わるという体験は、決して特別な人だけのものではない。その確信を持って、一歩一歩、誠実に積み上げていきます。お客様から学び、失敗を恐れず、正直に向き合い続けること。それが株式会社EXIAの、変わらない姿勢です。",
-              },
-              {
                 name: "河田 勇人",
-                role: "共同代表",
+                role: "代表",
                 message: "副業で人生を変えられる人を、一人でも多く増やしたい。その一心でEXIAを立ち上げました。海外輸出という武器を手に、日本中の人が自分の力で稼げる未来をつくる。誰かに依存しなくていい、自分の選択で生きていける社会へ。その夢に向かって、私たちは妥協しません。やるなら、本気で。それがEXIAのすべてです。",
               },
             ].map((person) => (
@@ -148,7 +143,7 @@ export default function Home() {
             {[
               { label: "会社名", value: "株式会社EXIA（エクシア）" },
               { label: "事業内容", value: "海外輸出コンサルティング / eBay出品代行・在庫管理・発送代行" },
-              { label: "代表者", value: "弘中 勇次 / 河田 勇人（共同代表）" },
+              { label: "代表者", value: "河田 勇人" },
               { label: "所在地", value: "神奈川県藤沢市湘南台3丁目4番地10" },
               { label: "電話番号", value: "（設定後に追記）" },
               { label: "メール", value: "（設定後に追記）" },
