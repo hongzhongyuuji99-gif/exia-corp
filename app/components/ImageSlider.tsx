@@ -61,16 +61,16 @@ export function ImageSlider() {
           <div className="hidden md:flex h-full">
             <div
               className="flex flex-col justify-center px-16 py-12 flex-shrink-0"
-              style={{ width: '42%', background: '#0a1628' }}
+              style={{ width: '55%', background: '#0a1628' }}
             >
               <p className="text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">{slide.label}</p>
               <h2
-                className="text-3xl lg:text-4xl font-black text-white leading-tight mb-6"
+                className="text-4xl lg:text-5xl font-black text-white leading-tight mb-6"
                 style={{ whiteSpace: 'pre-line' }}
               >
                 {slide.heading}
               </h2>
-              <p className="text-gray-400 text-sm leading-relaxed">{slide.body}</p>
+              <p className="text-gray-400 text-base leading-relaxed">{slide.body}</p>
             </div>
             <div className="flex-1 relative overflow-hidden">
               {/* 背景: 同画像をぼかして余白を埋める */}
@@ -99,9 +99,6 @@ export function ImageSlider() {
             }}
           />
         ))}
-      </div>
-      <div className="absolute bottom-6 right-6 text-white/40 text-sm font-bold tracking-widest z-10">
-        {String(current + 1).padStart(2, '0')} / {String(SLIDES.length).padStart(2, '0')}
       </div>
     </section>
   )
