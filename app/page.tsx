@@ -19,10 +19,10 @@ export default function Home() {
             <a href="#service" className="hover:text-blue-700 transition">事業内容</a>
             <a href="#message" className="hover:text-blue-700 transition">代表メッセージ</a>
             <a href="#company" className="hover:text-blue-700 transition">会社概要</a>
-            <a href="#contact" className="bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition">お問い合わせ</a>
+            <a href="mailto:info@exportshare.co.jp" className="bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition">お問い合わせ</a>
           </nav>
           {/* モバイル用CTAボタン */}
-          <a href="#contact" className="md:hidden bg-blue-700 text-white text-sm font-bold px-4 py-2 rounded-full">
+          <a href="mailto:info@exportshare.co.jp" className="md:hidden bg-blue-700 text-white text-sm font-bold px-4 py-2 rounded-full">
             お問い合わせ
           </a>
         </div>
@@ -145,7 +145,7 @@ export default function Home() {
               { label: "代表者", value: "河田 勇人" },
               { label: "所在地", value: "神奈川県藤沢市湘南台3丁目4番地10" },
               { label: "電話番号", value: "（設定後に追記）" },
-              { label: "メール", value: "（設定後に追記）" },
+              { label: "メール", value: "info@exportshare.co.jp" },
               { label: "ビジョン", value: "CHANGE YOUR LIFE" },
             ].map((row) => (
               <div key={row.label} className="flex flex-col md:flex-row py-7 gap-4">
